@@ -21,8 +21,7 @@ $('a[href^="#"]').click(function(){
 });
 
 //slick
-var $slide = $(".slider")
-  .slick({
+$(".slider").slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -30,7 +29,7 @@ var $slide = $(".slider")
     fade: true,
     speed: 2000,
     autoplay: true,
-    autoplaySpeed: 4995,
+    autoplaySpeed: 5000,
     dots: true,
     dotsClass: 'slide-dots',
   })
