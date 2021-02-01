@@ -1,0 +1,52 @@
+@charset "UTF-8";
+@import "_default";
+@import "_general";
+/*@import "_animation";*/
+
+
+/*==================================================
+
+    1. common
+    2. header
+    3. main
+    4. footer
+    5. other
+
+==================================================*/
+
+
+/*==================================================
+ 1. common
+==================================================*/
+
+/* color */
+$color_black: #231815;
+
+/* font */
+
+
+/* development */
+img:not([alt]){
+    outline: 3px dashed pink;
+}
+
+/* Common Parts */
+body {
+}
+
+.pc {
+    display: inherit;
+    @include pad {
+        display: none;
+    }
+}
+.sp {
+    display: none;
+    @include pad {
+        display: inherit;
+    }
+}
+
+/*==================================================
+ 2. 
+==================================================*/

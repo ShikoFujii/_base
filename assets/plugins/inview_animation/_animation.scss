@@ -1,0 +1,92 @@
+
+/*==================================================*/
+/* アニメーション用css */
+/*==================================================*/
+
+@mixin keyframes($animation-name: animaton) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($animation-name) {
+  -webkit-animation: $animation-name;
+  -moz-animation: $animation-name;
+  animation: $animation-name;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+/*==================================================*/
+
+/*==============================================================*/
+  /* アニメーション */
+/*==============================================================*/
+  
+@include keyframes(bright){
+  0% {
+    filter: brightness(0.2);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+@include keyframes(scroll){
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@include keyframes(scroll_mozi){
+  0% {
+    transform: translateY(0%) rotateZ(90deg) scaleX(.8);;
+  }
+  50% {
+    transform: translateY(12%) rotateZ(90deg) scaleX(.8);
+  }
+  100% {
+    transform: translateY(0%) rotateZ(90deg) scaleX(.8);
+  }
+}
+
+@include keyframes(text_on){
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(text-eff_on){
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.bright{
+  @include animation(bright 1s ease);
+}
+
+
