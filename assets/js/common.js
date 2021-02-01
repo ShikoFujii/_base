@@ -21,3 +21,16 @@ $('a[href^="#"]').click(function(){
 });
 
 //slick
+var $slide = $(".slider")
+  .slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: true,
+    speed: 2000,
+    autoplay: true,
+    autoplaySpeed: 4995,
+    dots: true,
+    dotsClass: 'slide-dots',
+  })
