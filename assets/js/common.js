@@ -20,6 +20,22 @@ $('a[href^="#"]').click(function(){
     return false;
 });
 
+//スクロールしたら表示されるTOPへ戻るボタン
+$(function() {
+    var topBtn = $('.gototop');
+    //ボタンを非表示にする
+    topBtn.hide();
+    //スクロールしてページトップから100に達したらボタンを表示
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            topBtn.fadeIn();
+        } else {
+            topBtn.fadeOut();
+        }
+    });
+});
+
+
 //slick
 $(".slider").slick({
     infinite: true,
