@@ -156,28 +156,37 @@ body {
 }
 
 .header-nav {
+    height: 100%;
     &__wrapper {
         display: flex;
-        
+        height: 100%;
     }
     &__item {
         position: relative;
+        height: 100%;
         &:not(:first-child)::before {
             content: "";
             width: 1px;
             height: 1em;
-            background: $black;
+            background: #fff;
             position: absolute;
             left: 0;
             top: 50%;
             transform: translateY(-50%);
         }
+        &:last-child a {
+            padding-right: 0;
+        }
     }
     &__link {
         @extend %link;
         @extend %hover;
+        color: #fff;
         height: 100%;
         padding: 0 .7em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
