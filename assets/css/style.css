@@ -97,7 +97,8 @@ img:not([alt]) {
 
 /* Common Parts */
 body {
-  color: #231815; }
+  color: #231815;
+  background: green; }
 
 .pc {
   display: inherit; }
@@ -110,6 +111,45 @@ body {
   @media (max-width: 768px) {
     .sp {
       display: inherit; } }
+
+.slider .slick-prev, .slider .slick-next {
+  z-index: 3; }
+  .slider .slick-prev::before, .slider .slick-next::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900; }
+.slider .slick-prev {
+  left: 30px; }
+  .slider .slick-prev::before {
+    content: "\f053"; }
+.slider .slick-next {
+  right: 30px; }
+  .slider .slick-next::before {
+    content: "\f054"; }
+.slider .slide-dots {
+  display: flex;
+  text-align: center;
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%); }
+  .slider .slide-dots li {
+    display: inline-block;
+    margin: 0 15px; }
+    .slider .slide-dots li button {
+      position: relative;
+      text-indent: -9999px;
+      border: 0;
+      background: transparent; }
+      .slider .slide-dots li button:before {
+        content: '●';
+        color: #fff;
+        font-size: 20px;
+        text-indent: 0px;
+        position: absolute;
+        top: 0;
+        left: 0; }
+    .slider .slide-dots li.slick-active button:before {
+      color: #6ca8af; }
 
 /*==================================================
  2. header
