@@ -137,10 +137,7 @@ main {
   border: 1px solid #231815;
   display: flex;
   justify-content: center;
-  align-items: center;
-  transition: 0.3s ease; }
-  .gototop:hover {
-    opacity: .7; }
+  align-items: center; }
   .gototop__icon {
     font-size: 32px;
     color: #231815; }
