@@ -3,9 +3,13 @@ $(function () {
     /* ハンバーガーメニューの表示・非表示 */
     $('#hamburger-btn').click(function () {
         $('#hamburger-menu').addClass('active');
+        $('#cover').addClass('active');
+        $('body').css('overflow', 'hidden');
     });
     $('.close-hamburger').click(function () {
         $('#hamburger-menu').removeClass('active');
+        $('#cover').removeClass('active');
+        $('body').css('overflow', 'auto');
     });
 });
 
