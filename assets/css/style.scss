@@ -129,6 +129,16 @@ body {
     }
 }*/
 
+/* animation */
+@keyframes show{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
 /*==================================================
  2. header
 ==================================================*/
@@ -145,6 +155,7 @@ body {
     align-items: center;
     padding: 0 1em;
     color: #fff;
+    z-index: 10;
     &__logo-wrapper {
         display: block;
         width: 200px;
@@ -195,7 +206,76 @@ body {
 ==================================================*/
 
 main {
-    
+    padding: 20px; //後で消す
+    %item {
+        height: 64px;
+    }
+    .child-menu{
+        position: relative;
+        width: 100%;
+        &__parent-item-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start
+        }
+        &__parent-item {
+            @extend %item;
+            width: calc( 100% / 3 ); //メニューの数に合わせて調整
+            display: inline-block;
+            position: relative;
+            background: $black;
+            transition: $transition;
+            &:hover { background: #777; }
+            &:not(:first-child)::before {
+                content: "";
+                width: 1px;
+                height: 60%;
+                background: #fff;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &--has-child:hover { background: $main-color; }
+            &--has-child:hover ul {
+                display: block;
+                animation: show .3s linear 0s;
+            }
+        }
+        &__child-item-wrapper {
+            width: 100%;
+            position: absolute;
+            top: 64px;
+            left: 0;
+            display: none;
+            transition: $transition;
+        }
+        &__child-item {
+            @extend %item;
+            background: $black;
+            position: relative;
+            &:hover { background: $main-color; }
+            &::before {
+                content: "";
+                height: 1px;
+                width: 80%;
+                background: #fff;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        &__link {
+            @extend %link;
+            color: #fff;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+    }
 }
 
 /*==================================================

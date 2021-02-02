@@ -117,7 +117,7 @@ body {
     .sp {
       display: inherit; } }
 
-.header-nav__link {
+.header-nav__link, main .child-menu__link {
   color: #231815;
   display: block; }
 
@@ -184,6 +184,12 @@ body {
         }
     }
 }*/
+/* animation */
+@keyframes show {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 /*==================================================
  2. header
 ==================================================*/
@@ -198,7 +204,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 1em;
-  color: #fff; }
+  color: #fff;
+  z-index: 10; }
   .header__logo-wrapper {
     display: block;
     width: 200px;
@@ -234,6 +241,67 @@ body {
 /*==================================================
  3. main
 ==================================================*/
+main {
+  padding: 20px; }
+  main .child-menu__parent-item, main .child-menu__child-item {
+    height: 64px; }
+  main .child-menu {
+    position: relative;
+    width: 100%; }
+    main .child-menu__parent-item-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; }
+    main .child-menu__parent-item {
+      width: calc( 100% / 3 );
+      display: inline-block;
+      position: relative;
+      background: #231815;
+      transition: 0.3s ease; }
+      main .child-menu__parent-item:hover {
+        background: #777; }
+      main .child-menu__parent-item:not(:first-child)::before {
+        content: "";
+        width: 1px;
+        height: 60%;
+        background: #fff;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%); }
+      main .child-menu__parent-item--has-child:hover {
+        background: #e8884c; }
+      main .child-menu__parent-item--has-child:hover ul {
+        display: block;
+        animation: show .3s linear 0s; }
+    main .child-menu__child-item-wrapper {
+      width: 100%;
+      position: absolute;
+      top: 64px;
+      left: 0;
+      display: none;
+      transition: 0.3s ease; }
+    main .child-menu__child-item {
+      background: #231815;
+      position: relative; }
+      main .child-menu__child-item:hover {
+        background: #e8884c; }
+      main .child-menu__child-item::before {
+        content: "";
+        height: 1px;
+        width: 80%;
+        background: #fff;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%); }
+    main .child-menu__link {
+      color: #fff;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+
 /*==================================================
  4. footer
 ==================================================*/
