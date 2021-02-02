@@ -98,12 +98,12 @@ img:not([alt]) {
 /* Common Parts */
 body {
   color: #231815;
-  font-size: 16px; }
+  font-size: 16px;
+  box-sizing: border-box; }
 
 #body-wrapper {
   min-height: 100vh;
-  position: relative;
-  box-sizing: border-box; }
+  position: relative; }
 
 .pc {
   display: inherit; }
@@ -117,9 +117,19 @@ body {
     .sp {
       display: inherit; } }
 
+.header-nav__link {
+  color: #231815;
+  display: block; }
+
 .header__logo {
   width: 100%;
   height: auto; }
+
+.header-nav__link {
+  opacity: 1;
+  transition: 0.3s ease; }
+  .header-nav__link:hover {
+    opacity: .7; }
 
 /*%slider {
     .slick-prev, .slick-next {
@@ -187,11 +197,29 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1em; }
+  padding: 0 1em;
+  color: #fff; }
   .header__logo-wrapper {
     display: block;
     width: 200px;
     height: auto; }
+
+.header-nav__wrapper {
+  display: flex; }
+.header-nav__item {
+  position: relative; }
+  .header-nav__item:not(:first-child)::before {
+    content: "";
+    width: 1px;
+    height: 1em;
+    background: #231815;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); }
+.header-nav__link {
+  height: 100%;
+  padding: 0 .7em; }
 
 /*==================================================
  3. main

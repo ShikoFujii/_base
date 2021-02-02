@@ -39,12 +39,12 @@ img:not([alt]){
 body {
     color: $black;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 #body-wrapper {
     min-height: 100vh;
     position: relative;
-    box-sizing: border-box;
 }
 
 .pc {
@@ -62,10 +62,18 @@ body {
 
 %link {
     color: $black;
+    display: block;
 }
 %img {
     width: 100%;
     height: auto;
+}
+%hover {
+    opacity: 1;
+    transition: $transition;
+    &:hover {
+        opacity: .7;
+    }
 }
 /*%slider {
     .slick-prev, .slick-next {
@@ -136,6 +144,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 0 1em;
+    color: #fff;
     &__logo-wrapper {
         display: block;
         width: 200px;
@@ -148,13 +157,27 @@ body {
 
 .header-nav {
     &__wrapper {
+        display: flex;
         
     }
     &__item {
-        
+        position: relative;
+        &:not(:first-child)::before {
+            content: "";
+            width: 1px;
+            height: 1em;
+            background: $black;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
     &__link {
-        
+        @extend %link;
+        @extend %hover;
+        height: 100%;
+        padding: 0 .7em;
     }
 }
 
