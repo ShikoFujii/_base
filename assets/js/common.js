@@ -33,8 +33,6 @@ $('a[href^="#"]').click(function(){
 //スクロールしたら表示されるTOPへ戻るボタン
 $(function() {
     var topBtn = $('#gototop');
-    //ボタンを非表示にする
-    topBtn.hide();
     //スクロールしてページトップから100に達したらボタンを表示
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {

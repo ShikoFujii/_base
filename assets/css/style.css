@@ -210,7 +210,11 @@ body {
   border: 1px solid #231815;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s ease; }
+  .gototop.active {
+    opacity: 1; }
   .gototop:hover {
     background: #c8e4ff; }
   .gototop__icon {
