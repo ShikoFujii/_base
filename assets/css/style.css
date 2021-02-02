@@ -97,10 +97,11 @@ img:not([alt]) {
 
 /* Common Parts */
 body {
-  color: #231815; }
+  color: #231815;
+  font-size: 16px; }
 
 #body-wrapper {
-  min-height: 200vh;
+  min-height: 100vh;
   position: relative;
   box-sizing: border-box; }
 
@@ -115,6 +116,10 @@ body {
   @media (max-width: 768px) {
     .sp {
       display: inherit; } }
+
+.header__logo {
+  width: 100%;
+  height: auto; }
 
 /*%slider {
     .slick-prev, .slick-next {
@@ -173,8 +178,20 @@ body {
  2. header
 ==================================================*/
 .header {
-  height: 40px;
-  background: #e8884c; }
+  height: 60px;
+  background: #e8884c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em; }
+  .header__logo-wrapper {
+    display: block;
+    width: 200px;
+    height: auto; }
 
 /*==================================================
  3. main
@@ -194,7 +211,7 @@ body {
     color: #fff;
     display: block;
     margin: 0 auto;
-    text-align: center; }
+    font-size: 12px; }
 
 /*==================================================
  5. other

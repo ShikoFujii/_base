@@ -1,7 +1,11 @@
 //footerの高さを#body-wrapperのpaddingに設定
 $(function () {
-    var padding = $('#footer').innerHeight();
-    $('#body-wrapper').css('padding-bottom', padding + 'px');
+    var padding_top = $('#header').innerHeight();
+    var padding_bottom = $('#footer').innerHeight();
+    $('#body-wrapper').css({
+        'padding-top': padding_top + "px",
+        'padding-bottom': padding_bottom + "px"
+    });
 });
 
 //グローバルナビゲーション
