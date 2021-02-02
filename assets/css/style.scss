@@ -20,7 +20,7 @@
 ==================================================*/
 
 /* color */
-$color_black: #231815;
+$black: #231815;
 
 /* font */
 
@@ -32,6 +32,7 @@ img:not([alt]){
 
 /* Common Parts */
 body {
+    color: $black;
 }
 
 .pc {
@@ -47,10 +48,14 @@ body {
     }
 }
 
-/*==================================================
- 2. 
-==================================================*/
+%link {
+    color: $black;
+}
 
+%img {
+    width: 100%;
+    height: auto;
+}
 
 %slider {
     .slick-prev, .slick-next {
@@ -75,30 +80,54 @@ body {
         bottom: 25px;
         left: 50%;
         transform: translateX(-50%);
-            li {
-                display: inline-block;
-                margin: 0 15px;
-                button {
-                    position: relative;
-                    text-indent: -9999px;
-                    border: 0;
-                    background: transparent;
-                    &:before {
-                        content: '●';
-                        color: #fff;
-                        font-size: 20px;
-                        text-indent: 0px;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                    }
+        li {
+            display: inline-block;
+            margin: 0 15px;
+            button {
+                position: relative;
+                text-indent: -9999px;
+                border: 0;
+                background: transparent;
+                &:before {
+                    content: '●';
+                    color: #fff;
+                    font-size: 20px;
+                    text-indent: 0px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
                 }
-                &.slick-active {
-                    button:before {
-                        color: #6ca8af;
-                    }
+            }
+            &.slick-active {
+                button:before {
+                    color: #6ca8af;
                 }
             }
         }
     }
 }
+
+/*==================================================
+ 2. header
+==================================================*/
+
+
+
+/*==================================================
+ 3. main
+==================================================*/
+
+
+
+/*==================================================
+ 4. footer
+==================================================*/
+
+
+
+/*==================================================
+ 5. other
+==================================================*/
+
+
+

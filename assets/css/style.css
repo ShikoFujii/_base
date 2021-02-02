@@ -1,31 +1,126 @@
-/*
-Error: Invalid CSS after "    }": expected selector or at-rule, was "}"
-        on line 104 of C:\xampp\htdocs\_base\assets\css\style.scss
+@charset "UTF-8";
+/*==================================================*/
+/* 前提css */
+/*==================================================*/
+a, article, blockquote, body, caption, dd, div, dl, dt, footer, h1, h2, h3, h4, h5, h6, header, html, iframe, img, li, nav, ol, p, pre, section, small, span, strong, table, td, th, tr, ul, figure {
+  background: 0;
+  border: 0;
+  font-size: 100%;
+  line-height: 1;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: bottom; }
 
-99:                     }
-100:                 }
-101:             }
-102:         }
-103:     }
-104: }
+a, small, span, strong {
+  vertical-align: baseline; }
 
-Backtrace:
-C:\xampp\htdocs\_base\assets\css\style.scss:104
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:42:in `parse'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:414:in `_to_tree'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/engine.rb:307:in `render_with_sourcemap'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:387:in `run'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:63:in `process_result'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/lib/ruby/gems/2.7.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/bin/sass:23:in `load'
-C:/Program Files/Adobe/Adobe Dreamweaver 2021/ruby/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"    }\": expected selector or at-rule, was \"}\"\A         on line 104 of C:\xampp\htdocs\_base\assets\css\style.scss\A \A 99:                     }\A 100:                 }\A 101:             }\A 102:         }\A 103:     }\A 104: }"; }
+article, footer, header, nav, section {
+  display: block; }
+
+li {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+address, th {
+  font-style: normal; }
+
+:focus, a:focus {
+  outline: 0; }
+
+br {
+  letter-spacing: normal; }
+
+textarea {
+  resize: none; }
+
+a {
+  text-decoration: none; }
+
+main img {
+  height: auto;
+  width: 100%; }
+
+/*==================================================*/
+/* レスポンシブ用css */
+/*==================================================*/
+.pc {
+  display: block; }
+  .pc.inline {
+    display: inline; }
+  .pc.flex {
+    display: flex; }
+
+.sp {
+  display: none; }
+  .sp.inline {
+    display: none; }
+  .sp.flex {
+    display: none; }
+
+@media (max-width: 768px) {
+  .pc {
+    display: none; }
+    .pc.inline {
+      display: none; }
+    .pc.flex {
+      display: none; }
+
+  .sp {
+    display: block; }
+    .sp.inline {
+      display: inline; }
+    .sp.flex {
+      display: flex; } }
+/*@import "_animation";*/
+/*==================================================
+
+    1. common
+    2. header
+    3. main
+    4. footer
+    5. other
+
+==================================================*/
+/*==================================================
+ 1. common
+==================================================*/
+/* color */
+/* font */
+/* development */
+img:not([alt]) {
+  outline: 3px dashed pink; }
+
+/* Common Parts */
+body {
+  color: #231815; }
+
+.pc {
+  display: inherit; }
+  @media (max-width: 768px) {
+    .pc {
+      display: none; } }
+
+.sp {
+  display: none; }
+  @media (max-width: 768px) {
+    .sp {
+      display: inherit; } }
+
+/*==================================================
+ 2. header
+==================================================*/
+/*==================================================
+ 3. main
+==================================================*/
+/*==================================================
+ 4. footer
+==================================================*/
+/*==================================================
+ 5. other
+==================================================*/
+
+/*# sourceMappingURL=style.css.map */
