@@ -22,7 +22,7 @@ $('a[href^="#"]').click(function(){
 
 //スクロールしたら表示されるTOPへ戻るボタン
 $(function() {
-    var topBtn = $('.gototop');
+    var topBtn = $('#gototop');
     //ボタンを非表示にする
     topBtn.hide();
     //スクロールしてページトップから100に達したらボタンを表示

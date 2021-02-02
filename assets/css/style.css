@@ -90,6 +90,7 @@ main img {
 ==================================================*/
 /* color */
 /* font */
+/* other var */
 /* development */
 img:not([alt]) {
   outline: 3px dashed pink; }
@@ -116,6 +117,9 @@ body {
 /*==================================================
  3. main
 ==================================================*/
+main {
+  height: 2000px; }
+
 /*==================================================
  4. footer
 ==================================================*/
@@ -133,7 +137,10 @@ body {
   border: 1px solid #231815;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  transition: 0.3s ease; }
+  .gototop:hover {
+    opacity: .7; }
   .gototop__icon {
     font-size: 32px;
     color: #231815; }

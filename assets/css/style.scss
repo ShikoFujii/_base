@@ -25,6 +25,9 @@ $black: #231815;
 /* font */
 
 
+/* other var */
+$transition: .3s ease;
+
 /* development */
 img:not([alt]){
     outline: 3px dashed pink;
@@ -117,7 +120,9 @@ body {
  3. main
 ==================================================*/
 
-
+main {
+    height: 2000px;
+}
 
 /*==================================================
  4. footer
@@ -140,10 +145,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: $transition;
+    &:hover {
+        opacity: .7;
+    }
     &__icon {
         font-size: 32px;
         color: $black;
     }
+    
 }
 
 
