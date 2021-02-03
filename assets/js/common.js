@@ -9,22 +9,20 @@ $(function () {
 });
 
 //グローバルナビゲーション
-$(function () {
     /* ハンバーガーメニューの表示・非表示 */
-    $('#hamburger-btn').click(function () {
-        $('#hamburger-btn').addClass('close-hamburger');
-        $('#hamburger-btn').addClass('active');
-        $('.header-nav').addClass('active');
-        $('.cover').addClass('active');
-        $('body').css('overflow', 'hidden');
-    });
-    $('.close-hamburger').click(function () {
-        $('#hamburger-btn').removeClass('active');
-        $('#hamburger-btn').removeClass('close-hamburger');
-        $('.header-nav').removeClass('active');
-        $('.cover').removeClass('active');
-        $('body').css('overflow', 'auto');
-    });
+$(document).on('click', '#hamburger-btn' , function() {
+    $('#hamburger-btn').addClass('close-hamburger');
+    $('#hamburger-btn').addClass('active');
+    $('.header-nav').addClass('active');
+    $('.cover').addClass('active');
+    $('body').css('overflow', 'hidden');
+});
+$(document).on('click', '.close-hamburger' , function() {
+    $('#hamburger-btn').removeClass('active');
+    $('#hamburger-btn').removeClass('close-hamburger');
+    $('.header-nav').removeClass('active');
+    $('.cover').removeClass('active');
+    $('body').css('overflow', 'auto');
 });
 
 //アンカーリンクスムーズスクロール
@@ -44,8 +42,10 @@ $(function() {
     //スクロールしてページトップから100に達したらボタンを表示
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
+            topBtn.show(300);
             topBtn.addClass('active');
         } else {
+            topBtn.hide(300);
             topBtn.removeClass('active');
         }
     });
