@@ -12,13 +12,17 @@ $(function () {
 $(function () {
     /* ハンバーガーメニューの表示・非表示 */
     $('#hamburger-btn').click(function () {
-        $('#hamburger-menu').addClass('active');
-        $('#cover').addClass('active');
+        $('#hamburger-btn').addClass('close-hamburger');
+        $('#hamburger-btn').addClass('active');
+        $('.header-nav').addClass('active');
+        $('.cover').addClass('active');
         $('body').css('overflow', 'hidden');
     });
     $('.close-hamburger').click(function () {
-        $('#hamburger-menu').removeClass('active');
-        $('#cover').removeClass('active');
+        $('#hamburger-btn').removeClass('active');
+        $('#hamburger-btn').removeClass('close-hamburger');
+        $('.header-nav').removeClass('active');
+        $('.cover').removeClass('active');
         $('body').css('overflow', 'auto');
     });
 });
