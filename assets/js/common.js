@@ -40,13 +40,19 @@ $('a[href^="#"]').click(function(){
 $(function() {
     var topBtn = $('#gototop');
     //スクロールしてページトップから100に達したらボタンを表示
-    $(window).scroll(function () {
+    /*$(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
             topBtn.show(300);
-            topBtn.addClass('active');
         } else {
             topBtn.hide(300);
-            topBtn.removeClass('active');
+        }
+    });*/
+    topBtn.hide();
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            topBtn.fadeIn();
+        } else {
+            topBtn.fadeOut();
         }
     });
 });
