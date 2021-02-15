@@ -186,16 +186,6 @@ body {
     }
 }*/
 /* animation */
-@keyframes show {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
-@keyframes hide {
-  from {
-    opacity: 1; }
-  to {
-    opacity: 0; } }
 /*==================================================
  2. header
 ==================================================*/
@@ -249,7 +239,7 @@ body {
       left: 0;
       top: -1000px;
       width: 100%;
-      z-index: 18;
+      z-index: -1;
       transition: all 0.3s ease; }
       .header-nav.active {
         top: 60px; }
@@ -284,10 +274,11 @@ body {
   outline: none;
   padding: 0;
   appearance: none;
-  width: 40px;
-  height: 40px;
+  width: 52px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center; }
   .hamburger-btn__line {
@@ -296,6 +287,7 @@ body {
     height: 3px;
     background: #e8884c;
     border-radius: 3px;
+    margin-top: 12px;
     position: relative;
     transition: all 0.3s ease; }
     .hamburger-btn__line::before, .hamburger-btn__line::after {
@@ -312,6 +304,9 @@ body {
       bottom: 8px; }
     .hamburger-btn__line::after {
       top: 8px; }
+  .hamburger-btn__name {
+    color: #e8884c;
+    margin-top: 10px; }
   .hamburger-btn.active .hamburger-btn__line {
     background: transparent; }
     .hamburger-btn.active .hamburger-btn__line::before, .hamburger-btn.active .hamburger-btn__line::after {

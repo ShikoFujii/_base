@@ -22,7 +22,7 @@
 /* color */
 $black: #231815;
 $main-color: #e8884c;
-$accent-color: #c8e4ff;
+$sub-color: #c8e4ff;
 
 /* font */
 
@@ -135,22 +135,6 @@ body {
 }*/
 
 /* animation */
-@keyframes show{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-@keyframes hide{
-    from{
-        opacity: 1;
-    }
-    to{
-        opacity: 0;
-    }
-}
 
 /*==================================================
  2. header
@@ -218,7 +202,8 @@ body {
         left: 0;
         top: -1000px;
         width: 100%;
-        z-index: $z-header-menu;
+        //z-index: $z-header-menu;
+        z-index: -1;
         transition: $transition;
         &.active {
             top: 60px;
@@ -246,7 +231,7 @@ body {
             box-sizing: border-box;
             background: $main-color;
             &:hover { 
-                background: $accent-color;
+                background: $sub-color;
                 opacity: 1;
                 color: $black;
             }
@@ -262,10 +247,11 @@ body {
     outline: none;
     padding: 0;
     appearance: none;
-    width: 40px;
-    height: 40px;
+    width:52px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     &__line {
@@ -274,6 +260,7 @@ body {
         height: 3px;
         background: $main-color;
         border-radius: 3px;
+        margin-top: 12px;
         position: relative;
         transition: $transition;
         &::before, &::after {
@@ -293,6 +280,10 @@ body {
         &::after {
             top: 8px;
         }
+    }
+    &__name {
+        color: #e8884c;
+        margin-top: 10px;
     }
     &.active .hamburger-btn__line {
         background: transparent;
@@ -439,7 +430,7 @@ main {
         transition: $transition;
         //animation: hide .3s linear 0s;
         &:hover {
-            background: $accent-color;
+            background: $sub-color;
         } 
     }
     &__icon {
